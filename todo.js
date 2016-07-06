@@ -58,8 +58,6 @@ $(document).ready(function() {
             }
             var date = new Date();
             date.setTime(key);
-            //var dateStr = date.toDateString() + " " + + " " +  date.toLocaleTimeString();
-             
             rec += "<tr id='" + key + "'><td>" + "・" + data.todo + "</td>";
             rec += "<td>" + data.year + "年" + data.month + "月" + data.day + "日" + "</td>";
             rec += "<td>" + data.deadline + "</td>";
@@ -103,5 +101,3 @@ function getDateDiff(previous, latest) {
   diff -= seconds * (1000);
   return {days:days, hours:hours, mins:mins, seconds:seconds};
 }
-
-
