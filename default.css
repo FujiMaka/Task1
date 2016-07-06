@@ -1,16 +1,21 @@
 body {
-  background-color: #222;
+    background-color: #222;
+    color: white;
+    width: 700px;
+    margin: 0 auto;
 }
 
-div#main {
-  width: 600px;
-  margin: 50px auto;
-  background-color: #EEE;
-  padding: 10%;
+fieldset{
+    text-align: center;
 }
 
-h2#result {
-  border: dashed 4px #AAA;
-  background-color: #FFF;
-  padding: 10px 20px;
+#clear{
+    margin:0px 250px;
+}
+
+#list{
+    background-color:aliceblue;
+    color: black;
+    margin: 50px auto;
+    padding: 20px 10px;
 }
