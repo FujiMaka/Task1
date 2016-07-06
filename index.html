@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8"　/>
-  <title>生まれて何日</title>
-  <link rel="stylesheet" href="default.css">
-</head>
-<body>
-  <div id="main">
-    <h1>あなたの誕生日を入力してください</h1>
-    <h2 style="display: none" id="result"></h2>
-    <form method="post" onsubmit="calculateBirthday(); return false;">
-      <input type="number" id="year" name="year" value=2000>年
-      <input type="number" id="month" name="month" value=1 min=1 max=12>月
-      <input type="number" id="day" name="day" value=1 min=1 max=31>日
-      <input type="submit" value="この日が私の誕生日です">
-    </form>
-  </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>TODOリスト</title>
+        <link rel="stylesheet" href="default.css">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>To Do List</h1>
+            </header>
+            <fieldset>
+                <div>
+                <p>
+                    <label>やるべきこと</label>
+                    <input id="todo" type="text" name="todo" size="60" maxlength="20">
+                </p>
+                <p>
+                    <label>締め切り　(西暦)</label>
+                    <input type="number"  id="year" name="year" min="2016" maxlength="4" title="西暦で入力してね">年
+                    <input type="number" id="month" name="month"  min=1 max=12 maxlength="2">月
+                    <input type="number" id="day" name="day" min=1 max=31 maxlength="2">日
+                </p>
+                <p><button id="registration">登録</button></p>
+                    </div>
+            </fieldset>
+            <div id="list">
+                <table id="list">
 
-  <script type="text/javascript" src="birthday.js"></script>
-</body>
+                    <thead>
+                        <tr>
+                            <th>やるべきこと</th>
+                            <th>締め切り</th>
+                            <th>残り</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            
+            <button id="clear">全リストを削除</button>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+        <script src="checkText.js"></script>
+        <script src="todo.js"></script>
+    </body>
 </html>
